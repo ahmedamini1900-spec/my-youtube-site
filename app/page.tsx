@@ -8,9 +8,9 @@ import { searchVideos } from '../lib/youtube';
 type VideoItem = any;
 
 export default function Home() {
-  const [videos, setVideos] = useState<VideoItem[]>([]);
+  const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [selectedVideo, setSelectedVideo] = useState(null);
   const [query, setQuery] = useState('');
 
   const handleSearch = async (q) => {
