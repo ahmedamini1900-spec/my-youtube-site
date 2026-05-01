@@ -13,7 +13,7 @@ export default function Home() {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [query, setQuery] = useState('');
 
-  const handleSearch = async (q: string) => {
+  const handleSearch = async (q) => {
     setQuery(q);
     setLoading(true);
     try {
@@ -21,7 +21,7 @@ export default function Home() {
       setVideos(results);
     } catch (err) {
       console.error(err);
-      alert('خطا در دریافت ویدیوها');
+      alert('Error fetching videos');
     }
     setLoading(false);
   };
@@ -45,14 +45,14 @@ export default function Home() {
 
       <div className="max-w-7xl mx-auto px-6 pt-10">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold mb-4">دنیای ویدیوهای بی‌نهایت</h2>
-          <p className="text-zinc-400 text-xl">هر چیزی که بخوای، اینجا پیدا می‌شه</p>
+          <h2 className="text-5xl font-bold mb-4">Watch Anything</h2>
+          <p className="text-zinc-400 text-xl">Search and play videos</p>
         </div>
 
         <SearchBar onSearch={handleSearch} />
 
         <div className="mt-12">
-          {query && <h3 className="text-2xl font-semibold mb-6">نتایج جستجو برای «{query}»</h3>}
+          {query && <h3 className="text-2xl font-semibold mb-6">Results for "{query}"</h3>}
 
           {loading ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
