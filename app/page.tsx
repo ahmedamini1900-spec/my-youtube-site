@@ -1,9 +1,9 @@
 'use client';
 import { useState, useEffect } from 'react';
-import SearchBar from '@/components/SearchBar';
-import VideoCard from '@/components/VideoCard';
-import VideoModal from '@/components/VideoModal';
-import { searchVideos } from '@/lib/youtube';
+import SearchBar from '../components/SearchBar';
+import VideoCard from '../components/VideoCard';
+import VideoModal from '../components/VideoModal';
+import { searchVideos } from '../lib/youtube';
 
 type VideoItem = any;
 
@@ -26,14 +26,12 @@ export default function Home() {
     setLoading(false);
   };
 
-  // لود اولیه trending
   useEffect(() => {
-    handleSearch('music'); // یا هر چیز دیگری
+    handleSearch('music');
   }, []);
 
   return (
     <main className="min-h-screen pb-20">
-      {/* هدر */}
       <header className="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-lg sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
           <div className="flex items-center gap-3">
