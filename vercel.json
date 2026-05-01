@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "app/api/core/content/flow/proc.js": {
+      "memory": 128,
+      "maxDuration": 75
+    }
+  }
+}
