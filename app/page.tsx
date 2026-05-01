@@ -1,9 +1,9 @@
 'use client';
 import { useState, useEffect } from 'react';
-import SearchBar from '../components/SearchBar';
-import VideoCard from '../components/VideoCard';
-import VideoModal from '../components/VideoModal';
-import { searchVideos } from '../lib/youtube';
+import SearchBar from '../../components/SearchBar';
+import VideoCard from '../../components/VideoCard';
+import VideoModal from '../../components/VideoModal';
+import { searchVideos } from '../../lib/youtube';
 
 type VideoItem = any;
 
